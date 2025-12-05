@@ -29,7 +29,7 @@
 1. Откройте Discord (Desktop App)
 2. Нажмите `Ctrl+Shift+I` (или `F12`) для открытия DevTools
 3. Перейдите во вкладку **Console**
-4. Скопируйте **весь код** из файла [`quest.js`](https://github.com/l-Log-l/Discord-ProtoQuest/blob/main/quest.js)
+4. Скопируйте **весь код** из файла [`quest.js`](https://raw.githubusercontent.com/l-Log-l/Discord-ProtoQuest/main/quest.js)
 5. Вставьте в консоль и нажмите Enter
 
 ### Способ 2: Через BetterDiscord/Vencord
