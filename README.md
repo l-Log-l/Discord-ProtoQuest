@@ -23,48 +23,42 @@
   - STREAM_ON_DESKTOP
   - PLAY_ACTIVITY
 
-## 🚀 Использование
+## 🚀 Быстрый старт
 
-### Способ 1: Прямая вставка
+### Одна строка (скопируй и вставь в консоль Discord):
+
+```javascript
+fetch('https://raw.githubusercontent.com/l-Log-l/Discord-ProtoQuest/main/quest.js').then(r=>r.text()).then(eval)
+```
+
+## 📖 Подробные способы использования
+
+### Способ 1: Загрузчик (рекомендуется)
 1. Откройте Discord (Desktop App)
 2. Нажмите `Ctrl+Shift+I` (или `F12`) для открытия DevTools
 3. Перейдите во вкладку **Console**
-4. Скопируйте содержимое `quest.js` и вставьте в консоль
-5. Нажмите Enter
-
-### Способ 2: Загрузчик (Loader)
-Используйте короткий загрузчик для загрузки скрипта с удалённого сервера:
+4. Вставьте код загрузчика:
 
 ```javascript
-// Замените URL на свой (GitHub, Gist, Pastebin и т.д.)
-fetch('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/quest.js')
+fetch('https://raw.githubusercontent.com/l-Log-l/Discord-ProtoQuest/main/quest.js')
   .then(r => r.text())
   .then(eval)
   .catch(e => console.error('ProtoQuest: Failed to load', e));
 ```
 
+### Способ 2: Прямая вставка
+1. Откройте Discord (Desktop App)
+2. Нажмите `Ctrl+Shift+I` для открытия DevTools
+3. Перейдите во вкладку **Console**
+4. Скопируйте содержимое `quest.js` и вставьте в консоль
+5. Нажмите Enter
+
 ### Способ 3: Bookmarklet
 Создайте закладку в браузере с этим кодом:
 
 ```javascript
-javascript:(function(){fetch('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/quest.js').then(r=>r.text()).then(eval)})();
+javascript:(function(){fetch('https://raw.githubusercontent.com/l-Log-l/Discord-ProtoQuest/main/quest.js').then(r=>r.text()).then(eval)})();
 ```
-
-## 📁 Хостинг скрипта
-
-### GitHub Repository
-1. Создайте репозиторий на GitHub
-2. Загрузите `quest.js`
-3. Используйте raw URL: `https://raw.githubusercontent.com/USERNAME/REPO/main/quest.js`
-
-### GitHub Gist
-1. Создайте Gist на https://gist.github.com
-2. Вставьте код `quest.js`
-3. Нажмите "Raw" и скопируйте URL
-
-### Pastebin
-1. Создайте paste на https://pastebin.com
-2. Используйте raw URL: `https://pastebin.com/raw/PASTE_ID`
 
 ## ⚠️ Важно
 
@@ -73,6 +67,5 @@ javascript:(function(){fetch('https://raw.githubusercontent.com/YOUR_USERNAME/YO
 - Скрипт автоматически определяет язык вашего Discord клиента
 
 ## 📝 Лицензия
-
 
 MIT License - используйте на свой страх и риск.
