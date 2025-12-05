@@ -23,42 +23,37 @@
   - STREAM_ON_DESKTOP
   - PLAY_ACTIVITY
 
-## 🚀 Быстрый старт
+## 🚀 Использование
 
-### Одна строка (скопируй и вставь в консоль Discord):
-
-```javascript
-fetch('https://raw.githubusercontent.com/l-Log-l/Discord-ProtoQuest/main/quest.js').then(r=>r.text()).then(eval)
-```
-
-## 📖 Подробные способы использования
-
-### Способ 1: Загрузчик (рекомендуется)
+### Способ 1: Прямая вставка (рекомендуется)
 1. Откройте Discord (Desktop App)
 2. Нажмите `Ctrl+Shift+I` (или `F12`) для открытия DevTools
 3. Перейдите во вкладку **Console**
-4. Вставьте код загрузчика:
+4. Скопируйте **весь код** из файла [`quest.js`](https://github.com/l-Log-l/Discord-ProtoQuest/blob/main/quest.js)
+5. Вставьте в консоль и нажмите Enter
 
+### Способ 2: Через BetterDiscord/Vencord
+Если у вас установлен BetterDiscord или Vencord, вы можете добавить скрипт как плагин.
+
+### Способ 3: Tampermonkey/Violentmonkey (для браузера)
+1. Установите расширение Tampermonkey
+2. Создайте новый скрипт
+3. Вставьте код из `quest.js`
+4. Добавьте в начало:
 ```javascript
-fetch('https://raw.githubusercontent.com/l-Log-l/Discord-ProtoQuest/main/quest.js')
-  .then(r => r.text())
-  .then(eval)
-  .catch(e => console.error('ProtoQuest: Failed to load', e));
+// ==UserScript==
+// @name         ProtoQuest
+// @namespace    discord-protoquest
+// @version      2.0
+// @description  Discord Quest Auto-Completer
+// @match        https://discord.com/*
+// @grant        none
+// ==/UserScript==
 ```
 
-### Способ 2: Прямая вставка
-1. Откройте Discord (Desktop App)
-2. Нажмите `Ctrl+Shift+I` для открытия DevTools
-3. Перейдите во вкладку **Console**
-4. Скопируйте содержимое `quest.js` и вставьте в консоль
-5. Нажмите Enter
+## ⚠️ Почему не работает fetch загрузчик?
 
-### Способ 3: Bookmarklet
-Создайте закладку в браузере с этим кодом:
-
-```javascript
-javascript:(function(){fetch('https://raw.githubusercontent.com/l-Log-l/Discord-ProtoQuest/main/quest.js').then(r=>r.text()).then(eval)})();
-```
+Discord блокирует fetch запросы к внешним ресурсам из-за CORS политики безопасности. Поэтому нужно копировать код напрямую.
 
 ## ⚠️ Важно
 
